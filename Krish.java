@@ -1,5 +1,7 @@
-import edu.cmu.ri.createlab.hummingbird.HummingbirdRobot;
+public class Krish {
 
-public class Krish extends HummingbirdRobot {
+    public static void main(String [] args) throws InterruptedException{
 
+        Krish myBot = new Krish();
+        myBot.
 }

@@ -1,4 +1,25 @@
-public class KrishClass
-{
+import edu.cmu.ri.createlab.hummingbird.HummingbirdRobot;
 
+public class KrishClass extends HummingbirdRobot {
+    private HummingbirdRobot robot;
+
+    public KrishClass() {
+        this.robot = new HummingbirdRobot();
+    }
+
+    public void talk(String phrase) throws InterruptedException
+    {
+        robot.speak(phrase);
+
+        robot.setServoPosition(1, 10);
+        Thread.sleep(200);
+        robot.setServoPosition(1, 100);
+        Thread.sleep(200);
+        robot.setServoPosition(1, 10);
+        Thread.sleep(200);
+        robot.setServoPosition(1, 100);
+        Thread.sleep(200);
+        robot.setServoPosition(1, 10);
+    }
 }
+

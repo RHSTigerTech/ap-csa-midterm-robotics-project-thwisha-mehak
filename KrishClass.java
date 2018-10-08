@@ -21,5 +21,30 @@ public class KrishClass extends HummingbirdRobot {
         Thread.sleep(200);
         robot.setServoPosition(1, 10);
     }
+    public void move()
+    {
+        robot.setMotorVelocity(2,100 );
+        robot.setMotorVelocity(2,-100 );
+        robot.setMotorVelocity(2,100 );
+        robot.setMotorVelocity(2,-100 );
+
+    }
+    public void light()
+    {
+        robot.setFullColorLED(5,196,26,0);
+        //Ask Mr.Crockett about the ledId
+
+    }
+    public void getSensorValue()
+    {
+
+        robot.getSensorValue(5);
+    }
+
+
+    }
 }
 
+
+
+    public void sensor()

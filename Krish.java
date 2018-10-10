@@ -4,7 +4,7 @@ public class Krish
     public static void main(String[] args) throws InterruptedException {
 
         KrishClass myBot = new KrishClass();
-//        myBot.talk("WOOF WOOF");
+        myBot.talk("WOOF WOOF");
         myBot.move();
         myBot.eye1();
         myBot.eye2();

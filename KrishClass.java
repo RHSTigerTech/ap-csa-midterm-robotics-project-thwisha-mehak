@@ -1,50 +1,84 @@
 import edu.cmu.ri.createlab.hummingbird.HummingbirdRobot;
 
-public class KrishClass extends HummingbirdRobot {
+//import java.util.Scanner;
+
+public class KrishClass extends HummingbirdRobot
+{
     private HummingbirdRobot robot;
 
-    public KrishClass() {
-        this.robot = new HummingbirdRobot();
+
+    public KrishClass()
+    {
+        //this.robot = new HummingbirdRobot();
+        super();
     }
+
 
     public void talk(String phrase) throws InterruptedException
     {
-        robot.speak(phrase);
+        this.speak(phrase);
 
-        robot.setServoPosition(1, 10);
+        this.setServoPosition(1, 10);
         Thread.sleep(200);
-        robot.setServoPosition(1, 100);
+        this.setServoPosition(1, 100);
         Thread.sleep(200);
-        robot.setServoPosition(1, 10);
+        this.setServoPosition(1, 10);
         Thread.sleep(200);
-        robot.setServoPosition(1, 100);
+        this.setServoPosition(1, 100);
         Thread.sleep(200);
-        robot.setServoPosition(1, 10);
+        this.setServoPosition(1, 10);
     }
-    public void move()
+
+
+    public void move() throws InterruptedException
     {
-        robot.setMotorVelocity(2,100 );
-        robot.setMotorVelocity(2,-100 );
-        robot.setMotorVelocity(2,100 );
-        robot.setMotorVelocity(2,-100 );
+        this.setMotorVelocity(1, 10000);
+         Thread.sleep(3000);
+
+
 
     }
-    public void light()
+
+
+    public void eye1()
     {
-        robot.setFullColorLED(5,196,26,0);
+       this.setFullColorLED(2, 196, 26, 0);
         //Ask Mr.Crockett about the ledId
-
     }
+
+
+    public void eye2()
+    {
+        this.setFullColorLED(1, 196, 26, 0);
+    }
+
+    public void eyes(int r, int g, int b){
+        this.setFullColorLED(1,r,g,b);
+        this.setFullColorLED(2,r,g,b);
+    }
+
+
+
     public void getSensorValue()
     {
-
-        robot.getSensorValue(5);
+        this.getSensorValue(4);
     }
 
 
-    }
+//    public void Ask()
+//    {
+//        String name = " ";
+//        Scanner userInput = new Scanner(System.in);
+//        do
+//        {
+//            System.out.print("\nWhat is your name?");
+//            name = userInput.nextLine();
+//            System.out.print("BOOOOOO" + name + "let me sing you a song" +);
+//
+//        }
+//    }
+
 }
 
 
-
-    public void sensor()
+//    public void sensor()

@@ -2,21 +2,18 @@ import edu.cmu.ri.createlab.hummingbird.HummingbirdRobot;
 
 import java.util.Scanner;
 
-public class KrishClass extends HummingbirdRobot
-{
+public class KrishClass extends HummingbirdRobot {
 
     private HummingbirdRobot robot;
 
 
-    public KrishClass()
-    {
+    public KrishClass() {
         //this.robot = new HummingbirdRobot();
         super();
     }
 
 
-    public void talk(String phrase) throws InterruptedException
-    {
+    public void talk(String phrase) throws InterruptedException {
         this.speak(phrase);
 
         this.setServoPosition(1, 10);
@@ -31,39 +28,48 @@ public class KrishClass extends HummingbirdRobot
     }
 
 
-    public void move() throws InterruptedException
-    {
+    public void move() throws InterruptedException {
         this.setMotorVelocity(1, 10000);
-        Thread.sleep(10000);
-        this.setMotorVelocity(1,0);
+        Thread.sleep(5000);
+        this.setMotorVelocity(1, 0);
+
+    }
+
+    public void move2() throws InterruptedException {
+        this.setMotorVelocity(2, 10000);
+        Thread.sleep(5000);
+        this.setMotorVelocity(2, 0);
 
     }
 
 
-    public void eye1()
-    {
-       this.setFullColorLED(2, 196, 26, 0);
+    public void eye1() {
+        this.setFullColorLED(2, 196, 26, 0);
         //Ask Mr.Crockett about the ledId
     }
 
 
-    public void eye2()
-    {
+    public void eye2() {
         this.setFullColorLED(1, 196, 26, 0);
     }
 
-    public void eyes(int r, int g, int b)
-    {
-        this.setFullColorLED(1,r,g,b);
-        this.setFullColorLED(2,r,g,b);
+    public void eyes(int r, int g, int b) {
+        this.setFullColorLED(1, r, g, b);
+        this.setFullColorLED(2, r, g, b);
     }
 
-
-
-    public void getSensorValue()
+    public void SensorMethod(HummingbirdRobot newRobot)
     {
-        this.getSensorValue(4);
-    }
+        while (newRobot.getSensorValue(3) > 25) {
+            if (newRobot.getSensorValue(4) > 100) {
+                System.out.println("Bright");
+                newRobot.setFullColorLED(1, 255, 255, 255);
+            } else {
+                System.out.println("Dark");
+                newRobot.setFullColorLED(1, 255, 0, 0);
+            }
+
+        }
 
 //   public void Ask()
 //    {
@@ -85,6 +91,6 @@ public class KrishClass extends HummingbirdRobot
 //    }
 
 
+    }
 }
-
 

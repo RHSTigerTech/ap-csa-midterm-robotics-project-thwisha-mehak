@@ -1,14 +1,14 @@
-public class Krish
-{
+import java.util.Scanner;
+public class Krish {
 
     public static void main(String[] args) throws InterruptedException {
 
         KrishClass myBot = new KrishClass();
-        myBot.talk("WOOF WOOF");
-        myBot.move();
+        myBot.talk("AAAAAAAAA");
         myBot.eye1();
         myBot.eye2();
-
+        myBot.move();
+//        myBot.Ask();
 
         int r = (int) (Math.random() * 256);
         int g = (int) (Math.random() * 256);
@@ -24,14 +24,30 @@ public class Krish
         Thread.sleep(2000);
 
 
+        String name = " ";
+        Scanner userInput = new Scanner(System.in);
 
+        do
+        {
+            System.out.print("\nWhat is your name?");
+            name = userInput.nextLine();
+            System.out.print("BOOOOOO" + name + "let me sing you a song");
+        }
+        while (!name.equals("-1"));
 
-
+        System.out.println(name.substring(2));
+        System.out.println(name.substring(2,5));
+        System.out.println(name.charAt(3));
 
         myBot.disconnect();
+
+    }
+
+
+
 
 //        while (true) {
 //
 //        }
-    }
-}
+        }
+

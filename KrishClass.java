@@ -1,9 +1,10 @@
 import edu.cmu.ri.createlab.hummingbird.HummingbirdRobot;
 
-//import java.util.Scanner;
+import java.util.Scanner;
 
 public class KrishClass extends HummingbirdRobot
 {
+
     private HummingbirdRobot robot;
 
 
@@ -33,9 +34,8 @@ public class KrishClass extends HummingbirdRobot
     public void move() throws InterruptedException
     {
         this.setMotorVelocity(1, 10000);
-         Thread.sleep(3000);
-
-
+        Thread.sleep(10000);
+        this.setMotorVelocity(1,0);
 
     }
 
@@ -52,7 +52,8 @@ public class KrishClass extends HummingbirdRobot
         this.setFullColorLED(1, 196, 26, 0);
     }
 
-    public void eyes(int r, int g, int b){
+    public void eyes(int r, int g, int b)
+    {
         this.setFullColorLED(1,r,g,b);
         this.setFullColorLED(2,r,g,b);
     }
@@ -64,21 +65,26 @@ public class KrishClass extends HummingbirdRobot
         this.getSensorValue(4);
     }
 
-
-//    public void Ask()
+//   public void Ask()
 //    {
 //        String name = " ";
 //        Scanner userInput = new Scanner(System.in);
+//
 //        do
 //        {
 //            System.out.print("\nWhat is your name?");
 //            name = userInput.nextLine();
-//            System.out.print("BOOOOOO" + name + "let me sing you a song" +);
-//
+//            System.out.print("BOOOOOO" + name + "let me sing you a song");
 //        }
+//        while (!name.equals("-1"));
+//
+//        System.out.println(name.substring(2));
+//        System.out.println(name.substring(2,5));
+//        System.out.println(name.charAt(3));
+//
 //    }
+
 
 }
 
 
-//    public void sensor()
